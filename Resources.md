@@ -11,3 +11,14 @@ https://wireframe.cc/ijtHOj mobile
 https://wireframe.cc/hgSkdb create page
 Github repo: https://github.com/tjansson-ui/ResumeBuilder
 Project board in GitHub Projects
+
+
+Look at exporting option
+- JSPDF library
+- PDFMAKE library
+- To convert html resume into pdf
+
+
+- regular expression (RegEx)
+good to match formats and control inputs
+lots of examples online
