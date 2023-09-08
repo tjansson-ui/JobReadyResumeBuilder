@@ -8,8 +8,7 @@
 }
 
 a.navbar-brand:hover,
-a.nav-link:hover,
-a.nav-link.active:hover {
+a.nav-link:hover {
     text-decoration: none;
     color: var(--accent);
 }
@@ -76,4 +75,12 @@ footer {
 .button-container {
     display: flex;
     justify-content: center;
+}
+
+/* -------------media queries------------- */
+
+@media(max-width: 620px) {
+    #hero h2 {
+        font-size: 40px;
+    }
 }
