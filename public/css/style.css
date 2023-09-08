@@ -9,7 +9,7 @@
 
 a.navbar-brand:hover,
 a.nav-link:hover,
-a.nav-link.activ:hover {
+a.nav-link.active:hover {
     text-decoration: none;
     color: var(--accent);
 }
@@ -40,6 +40,15 @@ button a {
 button:hover {
     background: var(--accent);
     cursor: pointer;
+}
+
+.log-in {
+    margin: 15px 0;
+}
+
+footer {
+    background: var(--main);
+    color: white;
 }
 
 #hero {
