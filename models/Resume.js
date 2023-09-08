@@ -1,0 +1,46 @@
+// TODO
+// RESUME ATTRIBUTES
+// ID
+// FNAME
+// LNAME
+// EMAIL
+//Omiting street address do to public site
+// GITHUB
+
+// JOBCOMPANY1 string
+// JOBTITLE1
+// JOBDESCRIP1 long string
+// JOBSTART1 date
+// JOBEND1
+
+// JOBCOMPANY2
+// JOBTITLE2
+// JOBDESCRIP2
+// JOBSTART2
+// JOBEND2
+
+// JOBCOMPANY3
+// JOBTITLE3
+// JOBDESCRIP3
+// JOBSTART3
+// JOBEND3
+
+// INSTITION1
+// DEGREE1
+// START1
+// END1
+
+// INSTITION2
+// DEGREE2
+// START2
+// END2
+
+// INSTITION3
+// DEGREE3
+// START3
+// END3
+
+
+// SKILLS1 -- Languages, computer langs, hard/soft skills
+// SKILLS2
+// SKILLS3
