@@ -13,6 +13,15 @@ a.nav-link:hover {
     color: var(--accent);
 }
 
+a.sign-up {
+    color: var(--accent);
+}
+
+a.sign-up:hover {
+    text-decoration: none;
+    color: var(--main);
+}
+
 input {
     width: 100%;
     border-radius: 20px;
