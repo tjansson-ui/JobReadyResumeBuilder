@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Resume, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
@@ -28,5 +28,76 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
+
+// signup route
+router.get('/signup', (req, res) => {
+  try{
+    if (req.session.loggedIn) {
+      res.redirect('/')
+      return
+    }
+  } catch(err) {
+    res.status(500).json(err)
+  }
+})
+
+// profile route
+router.get('/profile', async (req, res) => {
+  const user_id = req.session.user_id
+
+  if(!user_id) {
+    res.redirect('/login')
+  }
+
+  try {
+    const user = await User.findByPk(user_id, {
+      raw: true
+    })
+
+    const resumes = await Resume.findAll({
+      where: {
+        user_id
+      },
+      raw: true
+    })
+
+    const comments = await Comment.findAll({
+      where: {
+        user_id
+      },
+      raw: true
+    })
+    res.render('profile', {...user, resumes, comments, logged_in: req.session.logged_in})
+
+  } catch(err) {
+    res.status(500).json(err)
+  }
+})
+
+router.get('/profile/:id', async (req, res) => {
+  try{
+      const resume = await Resume.findByPk(req.params.id, {
+          include: [{
+              model: Comment,
+              include: {
+                  model: User,
+                  attributes: ['username']
+              }
+          },
+          {
+              model: User,
+              attributes: ['username']
+          }]
+      })
+      const editResume = resume.get({
+          raw: true
+      })
+      res.render('edit-delete', {
+          editResume
+      })
+  } catch(err) {
+      res.status(500).json(err)
+  }
+})
 
 module.exports = router;
