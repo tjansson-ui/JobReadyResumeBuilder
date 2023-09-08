@@ -1,0 +1,41 @@
+[
+    {
+      "fname": "Sal",
+      "lname": "Goodman",
+      "email": "sal@hotmail.com",
+      "github": "https://github.com/users/salgoodman",
+      "job1": "Dairy Company",
+      "title1": "milkman",
+      "jobdescript1": "door delivery for milk",
+      "jobstart1": "FEB 2015",
+      "jobend1": "Present", 
+      "INSTITION1": "wisconsin university",
+      "DEGREE1": "biology",
+      "START1": "JAN 2018",
+      "END1": "OCT 2022",
+      "Skill1": "communication",
+      "Skill2": "chemistry expert",
+      "Skill3": "farming"
+
+    },
+    {
+        "fname": "Sal",
+        "lname": "Goodman",
+        "email": "sal@hotmail.com",
+        "github": "https://github.com/users/salgoodman",
+        "job1": "Dairy Company",
+        "title1": "milkman",
+        "jobdescript1": "door delivery for milk",
+        "jobstart1": "FEB 2015",
+        "jobend1": "Present", 
+        "INSTITION1": "wisconsin university",
+        "DEGREE1": "biology",
+        "START1": "JAN 2018",
+        "END1": "OCT 2022",
+        "Skill1": "communication",
+        "Skill2": "chemistry expert",
+        "Skill3": "farming"
+    }
+]
+
+
