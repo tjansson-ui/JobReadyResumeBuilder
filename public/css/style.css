@@ -1,0 +1,70 @@
+:root{
+    --main: #881f5b;
+    --accent: #da5a5f;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+a.navbar-brand:hover,
+a.nav-link:hover,
+a.nav-link.activ:hover {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+input {
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid var(--main);
+    padding: 8px;
+    font-size: 20px;
+}
+
+button {
+    text-align: center;
+    margin: 20px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background: var(--main);
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
+button a {
+    color: white;
+}
+
+button:hover {
+    background: var(--accent);
+    cursor: pointer;
+}
+
+#hero {
+    background-image: url("../assets/hero.jpg"), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-body {
+    margin: 4%;
+}
+
+.hero-body h2{
+    color: white;
+    font-size: 60px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
