@@ -35,6 +35,12 @@ addJob.addEventListener("click", (event) => {
         removeButton.onclick = function() {
             removeJobEntry(this);
         };
+
+        // Hide all "Remove" buttons initially
+        const removeButtons = document.querySelectorAll(".delJob");
+        removeButtons.forEach(button => {
+            button.style.display = "none";
+        });
     
         jobEntry.appendChild(companyInput);
         jobEntry.appendChild(roleInput);
@@ -44,6 +50,17 @@ addJob.addEventListener("click", (event) => {
         jobEntry.appendChild(removeButton);
     
         jobHistory.appendChild(jobEntry);  
+
+
+        // // Show the "Remove" button for the last job entry
+        //     removeButton.style.display = "block";
+
+        // Update the visibility of "Remove" buttons when adding a new job entry
+        if (jobHistory.childElementCount > 1) {
+            const lastJobEntry = jobHistory.lastChild;
+            lastJobEntry.querySelector(".delJob").style.display = "block";
+        }
+
 
         jobEntryCount++;
 
@@ -59,6 +76,12 @@ function removeJobEntry(button) {
     const jobHistory = document.getElementById("job-history");
     jobHistory.removeChild(jobEntry);
     jobEntryCount--;
+
+    // Show the "Remove" button for the new last job entry
+    const lastJobEntry = jobHistory.lastChild;
+    if (lastJobEntry) {
+        lastJobEntry.querySelector(".delJob").style.display = "block";
+    }
 
     // Enable the "Add Job" button when a job entry is removed
     if (jobEntryCount < 3) {
