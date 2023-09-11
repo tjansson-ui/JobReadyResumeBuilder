@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Create Page</title>
+</head>
+<body>
+    <h2>Personal Information</h2>
+
+    <div id="personal-info">
+        <div class="user">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <br>
+            <input type="email" placeholder="Email Address">
+            <input type="text" placeholder="GitHub Account">
+            <br>
+        </div>
+    </div>
+    <hr>
+
+    <h2>Employment History</h2>
+
+    <div id="job-history">
+        <div class="job-entry">
+            <input type="text" placeholder="Company">
+            <input type="text" placeholder="Role">
+            <br>
+            <input type="text" placeholder="Start date: MMM YYYY">
+            <input type="text" placeholder="End date: MMM YYYY">
+            <br>
+            <textarea placeholder="Role Description"></textarea>
+            <button onclick="removeJobEntry(this)">Remove</button>
+        </div>
+    </div>
+
+    <button id="add-job">Add Job</button>
+    <hr>
+
+    <h2>Education History</h2>
+
+    <div id="ed-history">
+        <div class="ed-entry">
+            <input type="text" placeholder="Institute">
+            <input type="text" placeholder="Degree">
+            <br>
+            <input type="text" placeholder="Start date: MMM YYYY">
+            <input type="text" placeholder="End date: MMM YYYY">
+            <br>
+            <textarea placeholder="Role Description"></textarea>
+            <button>Remove</button>
+        </div>
+    </div>
+
+    <button id="add-ed">Add Education</button>
+    <hr>
+
+    <h2>Additional Skills</h2>
+
+    <div id="skills">
+        <div class="skills">
+            <ul>
+               <li><input type="text" placeholder="Skill 1"></li>
+               <li><input type="text" placeholder="Skill 2"></li>
+               <li><input type="text" placeholder="Skill 3"></li> 
+            </ul>
+        </div>
+    </div>
+    <hr>
+
+
+
+    <script src="../scripts/create.js"></script>
+</body>
+</html>
