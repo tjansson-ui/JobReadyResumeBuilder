@@ -25,6 +25,7 @@
                     End Date: {{format_date edend1}}
                 </p>
 
+                {{#if institute2}}
                 <h6 id="company">{{institute2}}</h6>
                 <p>{{degree2}}</p>
                 <p class="startend">
@@ -33,7 +34,9 @@
                 <p class="startend">
                     End Date: {{format_date edend2}}
                 </p>
+                {{/if}}
 
+                {{#if institute3}}
                 <h6 id="company">{{institute3}}</h6>
                 <p>{{degree3}}</p>
                 <p class="startend">
@@ -42,7 +45,7 @@
                 <p class="startend">
                     End Date: {{format_date edend3}}
                 </p>
-
+                {{/if}}
             </div>
 
             <div id="work-history">
@@ -59,6 +62,7 @@
                     End Date: {{format_date roleend1}}
                 </p>
 
+                {{#if company2}}
                 <h6 id="company" class="company-margin">{{company2}} || {{role2}}</h6>
                 <ul>
                     <li>{{description2}}</li>
@@ -69,7 +73,9 @@
                 <p class="startend">
                     End Date: {{format_date roleend2}}
                 </p>
+                {{/if}}
 
+                {{#if company3}}
                 <h6 id="company" class="company-margin">{{company3}} || {{role3}}</h6>
                 <ul>
                     <li>{{description3}}</li>
@@ -80,7 +86,7 @@
                 <p class="startend">
                     End Date: {{format_date roleend3}}
                 </p>
-
+                {{/if}}
             </div>
 
             <div id="skills">
