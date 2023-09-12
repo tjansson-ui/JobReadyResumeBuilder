@@ -119,7 +119,8 @@ hr {
     margin-top: 5px;
 }
 
-#work-history h6.company-margin {
+#work-history h6.company-margin,
+#education-history h6.company-margin {
     margin-top: 25px;
 }
 
