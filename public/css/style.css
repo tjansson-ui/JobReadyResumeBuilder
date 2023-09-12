@@ -22,6 +22,10 @@ a.sign-up:hover {
     color: var(--main);
 }
 
+li {
+    text-align: left;
+}
+
 input {
     width: 100%;
     border-radius: 20px;
@@ -87,19 +91,18 @@ footer {
 }
 
 /* styling resume section on profile page */
+hr {
+    width: 100%;
+}
+
 .contact p {
     margin: 0px;
     font-size: 15px;
 }
 
-#worked-container {
-    display: flex;
-    justify-content:space-between;
-    /* align-items: flex-start; */
-}
-
 #work-history,
-#education-history {
+#education-history,
+#skills {
     display: flex;
     flex-direction: column;
     align-items:flex-start;
@@ -109,13 +112,18 @@ footer {
 
 #work-history-head {
     font-weight: 600;
+    margin-bottom: -10px;
 }
 
 #company {
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
-#work-history p,
+#work-history h6.company-margin,
+#education-history h6.company-margin {
+    margin-top: 25px;
+}
+
 #education-history p {
     font-size: 15px;
     margin-top: 10px;
@@ -128,8 +136,13 @@ footer {
     font-weight: 500;
 }
 
-#education-history {
+#work-history,
+#skills {
     margin-top: 35px;
+}
+
+#work-history ul {
+    margin: 15px 0;
 }
 
 /* styling comments on profile page */

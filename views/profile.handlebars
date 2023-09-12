@@ -3,47 +3,7 @@
 
     <h3>Resumes: </h3>
 
-    {{#each resumes}}
-        <div class="card text-center my-4">
-            <div class="card-body my-3">
-                <h4>{{fname}} {{lname}}</h4>
-                <div class="contact">
-                    <p>{{email}}</p>
-                    <p>GitHub: {{github}}</p>
-                </div>
-                <hr>
-
-        <div id="worked-container">
-            <div id="work-history">
-                <h5 id="work-history-head">Work History:</h5>
-                <h6 id="company">{{company1}} || {{role1}}</h6>
-                <p>{{description1}}</p>
-                <p class="startend">
-                    Start Date: {{format_date rolestart1}}
-                </p>
-                <p class="startend">
-                    End Date: {{format_date roleend1}}
-                </p>
-            </div>
-
-            <div id="education-history">
-                <h5 id="work-history-head">Education History:</h5>
-                <h6 id="company">{{institute1}}</h6>
-                <p>{{degree1}}</p>
-                <p class="startend">
-                    Start Date: {{format_date edstart1}}
-                </p>
-                <p class="startend">
-                    End Date: {{format_date edend1}}
-                </p>
-            </div>
-
-            </div>
-        </div>
-        </div>
-
-
-    {{/each}}
+    {{> resume}}
 
 
     <div class="card my-5">
