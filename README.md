@@ -1,7 +1,13 @@
-# Project 2: Career Craft
+# Project 2: Career Craft 
 
 ## Description
-The purpose of this application was to create a simple template for users to generate a resume. The application allows users to sign up for Career Craft's services, and then gives user's access to the resume generator. The application functions through Node JS and Express JS command line following the MVC paradigm. The application uses Handlebars.js as the templating language, and MySQL and Sequelize as the ORM. 
+The purpose of this application was to create a simple template for users to generate a resume. The application allows users to sign up for Career Craft's services, and then gives users access to the resume generator. The application functions through Node JS and Express JS command line following the MVC paradigm. The application uses Handlebars.js as the templating language, and MySQL and Sequelize as the ORM. 
+
+## User Story:
+<span style="background:purple"> User Story: AS someone seeking employment, I WANT a resume generator SO THAT I can easily create, update, and save a resume into a PDF to apply for jobs. </span>
+
+
+![screenshot](/JobReadyResumeBuilder/public/assets/homepage-screenshot.png)
 
   ## Table of Contents
   * [Installation](#installation)
@@ -14,10 +20,22 @@ The purpose of this application was to create a simple template for users to gen
 
 ## [Installation](#Table-of-Contents)
 1. Install 'node.js' https://nodejs.org/en/download.
+
 2. Clone this repo to your local computer https://github.com/tjansson-ui/JobReadyResumeBuilder.
+
 4. Install dependencies by typing `npm install` in the terminal's command line.
 
+5. Create an `.env` file in the root of the directory to create your own confidental username and password. [Env-Setup](https://www.npmjs.com/package/dotenv)
+
+
 ## [Usage](#table-of-contents)
+1. After installing the application, login into MySQL on the command line `mysql -u root -p` and then enter your password. 
+
+2. On the command line, run `SOURCE db/schema.sql;` then `exit`.
+
+3. On the command line, run `npm run seed` to run your seed files.
+
+4. To invoke the application, type `npm run watch` on the command line.
 
 ## [License](#table-of-contents)
 [MIT License](https://opensource.org/licenses/MIT)
