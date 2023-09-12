@@ -1,0 +1,20 @@
+{{#if singleResume.comments}}
+<section class="card my-5">
+      <div class="card-header">
+        <h3>Comments</h3>
+      </div>
+
+      <div class="card-body">
+        {{#each singleResume.comments as |comments| }}
+          <div>
+            <p>
+              {{comments.content}}
+            </p>
+            <p>
+              &mdash; {{user.username}}, {{format_date createdAt}}
+            </p>
+          </div>
+        {{/each}}
+      </div>
+    </section>
+  {{/if}}
