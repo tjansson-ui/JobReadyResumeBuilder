@@ -1,1 +1,28 @@
-<h1>Hi</h1>
+<div class="container my-5">
+    <h1>{{username}}'s Dashboard</h1>
+
+    <h3>Resumes: </h3>
+{{!-- 
+    {{#each resumes}}
+        
+
+
+    {{/each}} --}}
+
+
+    <div class="card my-5">
+        <div class="card-header">
+            <h3>Comments</h3>
+        </div>
+
+        <div class="card-body">
+            {{#each comments}}
+            <p>{{content}}</p>
+
+            <p>&mdash; {{format_date createdAt}}</p>
+            {{/each}}
+        </div>
+
+    </div>
+
+</div>
