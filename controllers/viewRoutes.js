@@ -122,9 +122,12 @@ router.get('/profile', async (req, res) => {
       },
       raw: true
     })
+
+    console.log(comments)
     res.render('profile', {...user, resumes, comments, logged_in: req.session.logged_in})
 
   } catch(err) {
+    console.log(err)
     res.status(500).json(err)
   }
 })
