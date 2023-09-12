@@ -35,6 +35,7 @@ router.get('/resumes/:id', async (req, res) => {
       ]
     })
 
+    
     let singleResume = resume.get({ plain: true })
     res.render('resume', {
       singleResume,

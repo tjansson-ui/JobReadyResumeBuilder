@@ -1,11 +1,11 @@
 const form = document.querySelector('form')
-const postId = document.getElementById('post-id')
+const resumeId = document.getElementById('post-id')
 const commentBody = document.querySelector('.form-input')
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
     const commentData = {
-        post_id: postId.value,
+        resume_id: resumeId.value,
         content: commentBody.value
     }
 
@@ -19,6 +19,7 @@ form.addEventListener('submit', (e) => {
         })
         .then(response => {
             if (response.status === 200) {
+                console.log(response)
                 window.location.reload()
 
             }

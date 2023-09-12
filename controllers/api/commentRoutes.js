@@ -22,7 +22,7 @@ router.post('/', async (req,res) => {
         const newComment = Comment.create({
             ...req.body,
             userId: req.session.user_id,
-            postId: req.session.post_id,
+            resumeId: req.session.resume_id,
             content: req.body.content
         })
 
