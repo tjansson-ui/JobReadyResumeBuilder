@@ -5,8 +5,6 @@ class Resume extends Model {
   
 }
 
-// TODO
-// RESUME ATTRIBUTES
 Resume.init(
     {
       id: {
@@ -33,14 +31,8 @@ Resume.init(
       },
       github: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       },
-
-// JOBCOMPANY1 string, allowNull: false
-// JOBTITLE1 string, allowNull: false
-// JOBDESCRIP1 long string
-// JOBSTART1 date, MMM YYYY, allowNull: false
-// JOBEND1 date, MMM YYYY, defaultValue present allowNull: false
 
 
       company1: {
@@ -55,26 +47,61 @@ Resume.init(
         type: DataTypes.STRING,
         allowNull: false,
       },
-      rolestart: {
-        type: DateTypes.DATE,
+      rolestart1: {
+        type: DataTypes.DATE,
         allowNull: false,
       },
-      roleend: {
-        type: DateTypes.DATE,
-        allowNull: false,
-        defaultValue: "Present",
+      roleend1: {
+        type: DataTypes.DATE,
+        allowNull: true,
+        
       },
-// JOBCOMPANY2
-// JOBTITLE2
-// JOBDESCRIP2
-// JOBSTART2
-// JOBEND2
 
-// JOBCOMPANY3
-// JOBTITLE3
-// JOBDESCRIP3
-// JOBSTART3
-// JOBEND3
+      company2: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      role2: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      description2: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      rolestart2: {
+        type: DataTypes.DATE,
+        allowNull: true,
+      },
+      roleend2: {
+        type: DataTypes.DATE,
+        allowNull: true,
+        
+      },
+
+      company3: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      role3: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      description3: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      rolestart3: {
+        type: DataTypes.DATE,
+        allowNull: true,
+      },
+      roleend3: {
+        type: DataTypes.DATE,
+        allowNull: true,
+        
+      },
+
+
       institute1: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -83,35 +110,65 @@ Resume.init(
       type: DataTypes.STRING,
       allowNull: false,
       },
-      edstart: {
-      type: DateTypes.DATE,
+      edstart1: {
+      type: DataTypes.DATE,
       allowNull: false,
       },
-      edend: {
-      type: DateTypes.DATE,
-      allowNull: false,
-      defaultValue: "Present", // if incomplete, still select an end date of last attended
+      edend1: {
+      type: DataTypes.DATE,
+      allowNull: true,
+       // if incomplete, still select an end date of last attended
     },
-    // INSTITION2
-    // DEGREE2
-    // START2
-    // END2
 
-    // INSTITION3
-    // DEGREE3
-    // START3
-    // END3
+    institute2: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      },
+      degree2: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      },
+      edstart2: {
+      type: DataTypes.DATE,
+      allowNull: true,
+      },
+      edend2: {
+      type: DataTypes.DATE,
+      allowNull: true,
+       // if incomplete, still select an end date of last attended
+    },
+
+    institute3: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      },
+      degree3: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      },
+      edstart3: {
+      type: DataTypes.DATE,
+      allowNull: true,
+      },
+      edend3: {
+      type: DataTypes.DATE,
+      allowNull: true,
+       // if incomplete, still select an end date of last attended
+    },
+   
+
+
     skill1: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       }, // SKILLS1 -- Languages, computer langs, hard/soft skills
     skill2: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     skill3: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
 }, 
 {
@@ -119,7 +176,7 @@ sequelize,
 timestamps: false,
 freezeTableName: true,
 underscored: true,
-modelName: 'user',
+modelName: 'resume',
 }
 )
 
