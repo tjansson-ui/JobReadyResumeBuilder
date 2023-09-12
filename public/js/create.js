@@ -14,6 +14,8 @@ addJob.addEventListener("click", (e) => {
     
         const jobEntry = document.createElement("div");
         jobEntry.classList.add("job-entry");
+
+        const para = document.createElement("p");
     
         const companyInput = document.createElement("input");
         companyInput.type = "text";
@@ -48,6 +50,7 @@ addJob.addEventListener("click", (e) => {
             }); 
         };
         
+        hideRemoveButtons();
 
         // Appends job entry block
         jobEntry.appendChild(companyInput);
@@ -56,6 +59,7 @@ addJob.addEventListener("click", (e) => {
         jobEntry.appendChild(endDateInput);
         jobEntry.appendChild(roleDescriptionTextarea);
         jobEntry.appendChild(removeButton);
+        jobEntry.appendChild(para);
     
         jobHistory.appendChild(jobEntry);  
 
@@ -85,6 +89,8 @@ addEd.addEventListener("click", (e) => {
     
         const edEntry = document.createElement("div");
         edEntry.classList.add("ed-entry");
+
+        const para = document.createElement("p")
     
         const schoolInput = document.createElement("input");
         schoolInput.type = "text";
@@ -116,6 +122,7 @@ addEd.addEventListener("click", (e) => {
             }); 
         };
         
+        hideRemoveButtons();
 
         // Appends education entry block
         edEntry.appendChild(schoolInput);
@@ -123,8 +130,10 @@ addEd.addEventListener("click", (e) => {
         edEntry.appendChild(startDateInput);
         edEntry.appendChild(endDateInput);
         edEntry.appendChild(removeButton);
-    
+        edEntry.appendChild(para);
+
         edHistory.appendChild(edEntry);  
+        edHistory.html("<br/>")
 
 
         // Update the visibility of "Remove" buttons when adding a new education entry
