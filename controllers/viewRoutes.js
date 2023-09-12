@@ -44,6 +44,14 @@ router.get('/signup', (req, res) => {
   }
 })
 
+router.get('/create', (req, res) => {
+  try{
+    res.render('create')
+  } catch(err) {
+    res.status(500).json(err)
+  }
+})
+
 // profile route
 router.get('/profile', async (req, res) => {
   const user_id = req.session.user_id
