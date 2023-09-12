@@ -1,5 +1,6 @@
 
 const addJob = document.getElementById("add-job")
+const addEd = document.getElementById("add-ed")
 let jobEntryCount = 1; 
 let edEntryCount = 1; 
 

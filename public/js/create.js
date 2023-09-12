@@ -1,8 +1,8 @@
 
 const addJob = document.getElementById("add-job")
+const addEd = document.getElementById("add-ed")
 let jobEntryCount = 1; 
 let edEntryCount = 1; 
-
 
 
 addJob.addEventListener("click", (e) => {
@@ -84,13 +84,13 @@ addEd.addEventListener("click", (e) => {
         const edHistory = document.getElementById("ed-history");
     
         const edEntry = document.createElement("div");
-        jobEntry.classList.add("ed-entry");
+        edEntry.classList.add("ed-entry");
     
-        const companyInput = document.createElement("input");
+        const schoolInput = document.createElement("input");
         schoolInput.type = "text";
         schoolInput.placeholder = "Institute";
     
-        const roleInput = document.createElement("input");
+        const degreeInput = document.createElement("input");
         degreeInput.type = "text";
         degreeInput.placeholder = "Degree";
     
@@ -106,7 +106,7 @@ addEd.addEventListener("click", (e) => {
         removeButton.textContent = "Remove";
         removeButton.classList.add("delete-ed");
         removeButton.onclick = function() {
-            removeJobEntry(this);
+            removeEdEntry(this);
         };
 
         const hideRemoveButtons = () => {
@@ -118,13 +118,13 @@ addEd.addEventListener("click", (e) => {
         
 
         // Appends education entry block
-        jobEntry.appendChild(schoolInput);
-        jobEntry.appendChild(degreeInput);
-        jobEntry.appendChild(startDateInput);
-        jobEntry.appendChild(endDateInput);
-        jobEntry.appendChild(removeButton);
+        edEntry.appendChild(schoolInput);
+        edEntry.appendChild(degreeInput);
+        edEntry.appendChild(startDateInput);
+        edEntry.appendChild(endDateInput);
+        edEntry.appendChild(removeButton);
     
-        jobHistory.appendChild(edEntry);  
+        edHistory.appendChild(edEntry);  
 
 
         // Update the visibility of "Remove" buttons when adding a new education entry
