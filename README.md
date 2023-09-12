@@ -3,9 +3,6 @@
 ## Description
 The purpose of this application was to create a simple template for users to generate a resume. The application allows users to sign up for Career Craft's services, and then gives users access to the resume generator. The application functions through Node JS and Express JS command line following the MVC paradigm. The application uses Handlebars.js as the templating language, and MySQL and Sequelize as the ORM. 
 
-## User Story:
-<span style="background:purple"> User Story: AS someone seeking employment, I WANT a resume generator SO THAT I can easily create, update, and save a resume into a PDF to apply for jobs. </span>
-
 
 ![screenshot](/JobReadyResumeBuilder/public/assets/homepage-screenshot.png)
 

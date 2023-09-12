@@ -38,7 +38,6 @@ router.get('/:id', async (req, res) => {
     }
 })
 
-// create new resume
 router.post('/', async (req, res) => {
     try {
         const resume = await Resume.create({
@@ -60,34 +59,6 @@ router.post('/', async (req, res) => {
             skill3: req.body.skill3
         })
         res.status(200).json({ resume, message: `Resume Created` })
-
-    //     const newResume = await Resume.findAll({
-    //         include: [
-    //             {
-    //                 model: Resume,
-    //                 attributes: [
-    //                     'fname', 
-    //                     'lname', 
-    //                     'email', 
-    //                     'github', 
-    //                     'company1', 
-    //                     'role1', 
-    //                     'description1', 
-    //                     'rolestart', 
-    //                     'roleend', 
-    //                     'institute1', 
-    //                     'degree1', 
-    //                     'edstart', 
-    //                     'edend', 
-    //                     'skill1', 
-    //                     'skill2', 
-    //                     'skill3',
-    //                 ],
-    //             },
-    //         ],
-    // })
-
-    // save resume
 
     } catch (err) {
         console.log(err)
