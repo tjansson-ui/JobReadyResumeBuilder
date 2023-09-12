@@ -92,6 +92,46 @@ footer {
     font-size: 15px;
 }
 
+#worked-container {
+    display: flex;
+    justify-content:space-between;
+    /* align-items: flex-start; */
+}
+
+#work-history,
+#education-history {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+#work-history-head {
+    font-weight: 600;
+}
+
+#company {
+    margin-top: 15px;
+}
+
+#work-history p,
+#education-history p {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+#work-history p.startend,
+#education-history p.startend {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#education-history {
+    margin-top: 35px;
+}
+
 /* styling comments on profile page */
 #card-header {
     background: var(--accent);
