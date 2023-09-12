@@ -4,14 +4,6 @@ const addEd = document.getElementById("add-ed")
 let jobEntryCount = 1; 
 let edEntryCount = 1; 
 
-console.log(jspdf)
-
-const { jsPDF } = jspdf
-const doc = new jsPDF();
-
-doc.text("Hello world!", 10, 10);
-doc.save("a4.pdf");
-
 
 addJob.addEventListener("click", (e) => {
     if (jobEntryCount < 3) {

@@ -181,6 +181,4 @@ modelName: 'resume',
 )
 
 
-// TODO 
-// connect resumeID to the userID
 module.exports = Resume;

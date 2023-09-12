@@ -21,6 +21,32 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
+// route to get resume by id
+router.get('/resumes/:id', async (req, res) => {
+  try {
+    const resume = await Resume.findOne({
+      where: {id: req.params.id},
+      include: [
+        User,
+        {
+          model: Comment,
+          include: [User]
+        }
+      ]
+    })
+
+    
+    let singleResume = resume.get({ plain: true })
+    res.render('resume', {
+      singleResume,
+      logged_in: req.session.logged_in
+    })
+
+  } catch(err) {
+    res.status(500).json(err)
+  }
+})
+
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/');
@@ -44,9 +70,27 @@ router.get('/signup', (req, res) => {
   }
 })
 
+// create page route 
+
 router.get('/create', (req, res) => {
   try{
     res.render('create')
+  } catch(err) {
+    res.status(500).json(err)
+  }
+})
+
+// review page route
+router.get('/review', async (req,res) => {
+  try {
+    const resumesPosted = await Resume.findAll({
+      include: [{ model: User }]
+    })
+
+    const resumes = resumesPosted.map((resume) => resume.get({ plain: true }))
+
+    res.render('review', { resumes, logged_in: req.session.logged_in })
+
   } catch(err) {
     res.status(500).json(err)
   }
@@ -78,9 +122,12 @@ router.get('/profile', async (req, res) => {
       },
       raw: true
     })
+
+    console.log(comments)
     res.render('profile', {...user, resumes, comments, logged_in: req.session.logged_in})
 
   } catch(err) {
+    console.log(err)
     res.status(500).json(err)
   }
 })

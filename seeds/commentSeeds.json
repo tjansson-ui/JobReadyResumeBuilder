@@ -1,25 +1,25 @@
 [
     {
-        "content": "I completely agree with this!",
+        "content": "I think this looks great!",
         "user_id": 1,
-        "post_id": 1
+        "resume_id": 1
     },
 
     {
-        "content": "I am not sure if I agree with this. Can you tell me more?",
+        "content": "Maybe update your job descriptions to include more information",
         "user_id": 2,
-        "post_id": 2
+        "resume_id": 2
     },
 
     {
-        "content": "I am not sure if I agree with this. Can you tell me more?",
+        "content": "You should add more to your job descriptions",
         "user_id": 3,
-        "post_id": 3
+        "resume_id": 3
     },
 
     {
-        "content": "I am not sure if I agree with this. Can you tell me more?",
+        "content": "Are your start dates correct?",
         "user_id": 4,
-        "post_id": 4
+        "resume_id": 4
     }
 ]
