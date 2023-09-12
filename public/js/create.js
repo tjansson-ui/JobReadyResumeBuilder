@@ -3,15 +3,6 @@ const addJob = document.getElementById("add-job")
 let jobEntryCount = 1; 
 let edEntryCount = 1; 
 
-// Hide all "Remove" buttons initially
-const hideRemoveButtons = () => {
-    const removeButtons = document.querySelectorAll(".delete");
-    removeButtons.forEach(button => {
-    button.style.display = "none";
-    }); 
-};
-
-hideRemoveButtons();
 
 
 addJob.addEventListener("click", (e) => {
@@ -45,10 +36,18 @@ addJob.addEventListener("click", (e) => {
     
         const removeButton = document.createElement("button");
         removeButton.textContent = "Remove";
-        removeButton.classList.add("delete");
+        removeButton.classList.add("delete-job");
         removeButton.onclick = function() {
             removeJobEntry(this);
         };
+
+        const hideRemoveButtons = () => {
+            const removeButtons = document.querySelectorAll(".delete-job");
+            removeButtons.forEach(button => {
+            button.style.display = "none";
+            }); 
+        };
+        
 
         // Appends job entry block
         jobEntry.appendChild(companyInput);
@@ -64,7 +63,7 @@ addJob.addEventListener("click", (e) => {
         // Update the visibility of "Remove" buttons when adding a new job entry
         if (jobHistory.childElementCount > 1) {
             const lastJobEntry = jobHistory.lastChild;
-            lastJobEntry.querySelector(".delete").style.display = "block";
+            lastJobEntry.querySelector(".delete-job").style.display = "block";
         }
 
 
@@ -105,10 +104,18 @@ addEd.addEventListener("click", (e) => {
     
         const removeButton = document.createElement("button");
         removeButton.textContent = "Remove";
-        removeButton.classList.add("delete");
+        removeButton.classList.add("delete-ed");
         removeButton.onclick = function() {
             removeJobEntry(this);
         };
+
+        const hideRemoveButtons = () => {
+            const removeButtons = document.querySelectorAll(".delete-ed");
+            removeButtons.forEach(button => {
+            button.style.display = "none";
+            }); 
+        };
+        
 
         // Appends education entry block
         jobEntry.appendChild(schoolInput);
@@ -123,7 +130,7 @@ addEd.addEventListener("click", (e) => {
         // Update the visibility of "Remove" buttons when adding a new education entry
         if (edHistory.childElementCount > 1) {
             const lastEdEntry = edHistory.lastChild;
-            lastEdEntry.querySelector(".delete").style.display = "block";
+            lastEdEntry.querySelector(".delete-ed").style.display = "block";
         }
 
 
@@ -145,7 +152,7 @@ function removeJobEntry(button) {
     // Show the "Remove" button for the new last job entry
     const lastJobEntry = jobHistory.lastChild;
     if (lastJobEntry) {
-        lastJobEntry.querySelector(".delete").style.display = "block";
+        lastJobEntry.querySelector(".delete-job").style.display = "block";
     }
 
     // Enable the "Add Job" button when a job entry is removed
@@ -163,10 +170,10 @@ function removeEdEntry(button) {
     // Show the "Remove" button for the new last ed entry
     const lastEdEntry = edHistory.lastChild;
     if (lastEdEntry) {
-        lastEdEntry.querySelector(".delete").style.display = "block";
+        lastEdEntry.querySelector(".delete-ed").style.display = "block";
     }
 
-    // Enable the "Add Job" button when a ed entry is removed
+    // Enable the "Add Education" button when a ed entry is removed
     if (edEntryCount < 3) {
         addEd.disabled = false;
     }
