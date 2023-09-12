@@ -74,7 +74,8 @@ router.post('/', async (req, res) => {
             edend3: req.body.edend3,
             skill1: req.body.skill1,
             skill2: req.body.skill2,
-            skill3: req.body.skill3
+            skill3: req.body.skill3,
+            user_id: req.session.user_id //is this needed??
         })
         res.status(200).json({ resume, message: `Resume Created` })
 

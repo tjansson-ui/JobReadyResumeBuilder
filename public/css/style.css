@@ -151,6 +151,16 @@ hr {
     color: white;
 }
 
+/* styling review page */
+button.add-comment {
+    background: var(--main);
+    color: white;
+}
+
+button.add-comment:hover {
+    background: var(--accent);
+}
+
 /* -------------media queries------------- */
 
 @media(max-width: 620px) {

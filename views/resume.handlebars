@@ -1,0 +1,104 @@
+<div class="container">
+    <div class="card text-center my-4">
+            <div class="card-body my-3">
+                <h4>{{singleResume.fname}} {{singleResume.lname}}</h4>
+                <div class="contact">
+                    <p>{{singleResume.email}}</p>
+                    <p>GitHub: {{singleResume.github}}</p>
+                </div>
+                
+
+                <div id="education-history">
+                <h6 id="work-history-head">EDUCATION:</h6>
+                <hr>
+                <h6 id="company">{{singleResume.institute1}}</h6>
+                <p>{{singleResume.degree1}}</p>
+                <p class="startend">
+                    Start Date: {{format_date singleResume.edstart1}}
+                </p>
+                <p class="startend">
+                    End Date: {{format_date singleResume.edend1}}
+                </p>
+
+                {{#if institute2}}
+                <h6 id="company" class="company-margin">{{singleResume.institute2}}</h6>
+                <p>{{singleResume.degree2}}</p>
+                <p class="startend">
+                    Start Date: {{format_date singleResume.edstart2}}
+                </p>
+                <p class="startend">
+                    End Date: {{format_date singleResume.edend2}}
+                </p>
+                {{/if}}
+
+                {{#if singleResume.institute3}}
+                <h6 id="company" class="company-margin">{{singleResume.institute3}}</h6>
+                <p>{{singleResume.degree3}}</p>
+                <p class="startend">
+                    Start Date: {{format_date singleResume.edstart3}}
+                </p>
+                <p class="startend">
+                    End Date: {{format_date singleResume.edend3}}
+                </p>
+                {{/if}}
+            </div>
+
+            <div id="work-history">
+                <h6 id="work-history-head">WORK EXPERIENCE:</h6>
+                <hr>
+                <h6 id="company">{{singleResume.company1}} || {{singleResume.role1}}</h6>
+                <ul>
+                    <li>{{singleResume.description1}}</li>
+                </ul>
+                <p class="startend">
+                    Start Date: {{format_date singleResume.rolestart1}}
+                </p>
+                <p class="startend">
+                    End Date: {{format_date singleResume.roleend1}}
+                </p>
+
+                {{#if singleResume.company2}}
+                <h6 id="company" class="company-margin">{{singleResume.company2}} || {{singleResume.role2}}</h6>
+                <ul>
+                    <li>{{singleResume.description2}}</li>
+                </ul>
+                <p class="startend">
+                    Start Date: {{format_date singleResume.rolestart2}}
+                </p>
+                <p class="startend">
+                    End Date: {{format_date singleResume.roleend2}}
+                </p>
+                {{/if}}
+
+                {{#if singleResume.company3}}
+                <h6 id="company" class="company-margin">{{singleResume.company3}} || {{singleResume.role3}}</h6>
+                <ul>
+                    <li>{{singleResume.description3}}</li>
+                </ul>
+                <p class="startend">
+                    Start Date: {{format_date singleResume.rolestart3}}
+                </p>
+                <p class="startend">
+                    End Date: {{format_date singleResume.roleend3}}
+                </p>
+                {{/if}}
+            </div>
+
+            <div id="skills">
+                <h6 id="work-history-head">SKILLS:</h6>
+                <hr>
+                <ul>
+                    <li>{{singleResume.skill1}}</li>
+                    <li>{{singleResume.skill2}}</li>
+                    <li>{{singleResume.skill3}}</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+
+        {{> add-comment}}
+
+    
+        {{> comments}}
+
+</div>
