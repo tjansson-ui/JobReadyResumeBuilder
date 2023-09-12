@@ -2,12 +2,22 @@
     <h1>{{username}}'s Dashboard</h1>
 
     <h3>Resumes: </h3>
-{{!-- 
+
     {{#each resumes}}
-        
+        <div class="card text-center my-4">
+            <div class="card-body my-3">
+                <h4>{{fname}} {{lname}}</h4>
+                <div class="contact">
+                    <p>{{email}}</p>
+                    <p>GitHub: {{github}}</p>
+                </div>
+                <hr>
+
+            </div>
+        </div>
 
 
-    {{/each}} --}}
+    {{/each}}
 
 
     <div class="card my-5">

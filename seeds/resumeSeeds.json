@@ -3,7 +3,7 @@
     "fname": "Sal",
     "lname": "Goodman",
     "email": "sal@hotmail.com",
-    "github": "https://github.com/users/salgoodman",
+    "github": "salgoodman",
     "company1": "Dairy Company",
     "role1": "milkman",
     "description1": "door delivery for milk",
@@ -16,14 +16,15 @@
     "edend1": "Oct 2022",
     "skill1": "communication",
     "skill2": "chemistry expert",
-    "skill3": "farming"
+    "skill3": "farming",
+    "user_id": 1
 
   },
   {
       "fname": "Lernantino",
       "lname": "Rafito",
       "email": "lernantino@gmail.com",
-      "github": "https://github.com/users/lernan",
+      "github": "lernan",
       "company1": "Ethical Hacking Company",
       "role1": "Whitehat Hacker",
       "description1": "Worked with companies to foolproof their servers",
@@ -45,13 +46,14 @@
       "edend1": "Nov 2016",
       "skill1": "communication",
       "skill2": "chemistry expert",
-      "skill3": "farming"
+      "skill3": "farming",
+      "user_id": 2
   },
   {
     "fname": "Amiko",
     "lname": "Nakamura",
     "email": "amiko2k20@aol.com",
-    "github": "https://github.com/users/amiko2k",
+    "github": "amiko2k",
     "company1": "Nordic",
     "role1": "Business Intelligence Analyst",
     "description1": "Used PowerBI and stuff",
@@ -72,13 +74,14 @@
     "edend2": "May 2010",
     "skill1": "wrestling",
     "skill2": "coding",
-    "skill3": "data governance certified professional"
+    "skill3": "data governance certified professional",
+    "user_id": 3
   },
   {
     "fname": "Jordan",
     "lname": "Keegan",
     "email": "jordan99@msn.com",
-    "github": "https://github.com/users/jordanlovescats",
+    "github": "jordanlovescats",
     "company1": "Good Company X2",
     "role1": "Cat Burglar",
     "description1": "Stole from people more fortunate than my family",
@@ -108,13 +111,14 @@
     "edend3": "May 2010",
     "skill1": "wrestling",
     "skill2": "wrangling",
-    "skill3": "animal lover"
+    "skill3": "animal lover",
+    "user_id": 4
   },
   {
     "fname": "Blake",
     "lname": "The",
     "email": "the_blake@yahoo.com",
-    "github": "https://github.com/users/the_blake_for_real",
+    "github": "the_blake_for_real",
     "company1": "Mattel",
     "role1": "Beach Ken",
     "description1": "Working the Beach",
@@ -144,7 +148,8 @@
     "edend3": "May 2010",
     "skill1": "beach",
     "skill2": "backflip",
-    "skill3": "finance"
+    "skill3": "finance",
+    "user_id": 5
   }
 ]
 
