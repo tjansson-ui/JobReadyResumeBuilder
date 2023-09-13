@@ -48,11 +48,11 @@ Resume.init(
         allowNull: false,
       },
       rolestart1: {
-        type: DataTypes.DATE,
+        type: DataTypes.STRING,
         allowNull: false,
       },
       roleend1: {
-        type: DataTypes.DATE,
+        type: DataTypes.STRING,
         allowNull: true,
         
       },
@@ -70,11 +70,11 @@ Resume.init(
         allowNull: true,
       },
       rolestart2: {
-        type: DataTypes.DATE,
+        type: DataTypes.STRING,
         allowNull: true,
       },
       roleend2: {
-        type: DataTypes.DATE,
+        type: DataTypes.STRING,
         allowNull: true,
         
       },
@@ -92,11 +92,11 @@ Resume.init(
         allowNull: true,
       },
       rolestart3: {
-        type: DataTypes.DATE,
+        type: DataTypes.STRING,
         allowNull: true,
       },
       roleend3: {
-        type: DataTypes.DATE,
+        type: DataTypes.STRING,
         allowNull: true,
         
       },
@@ -111,11 +111,11 @@ Resume.init(
       allowNull: false,
       },
       edstart1: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
       },
       edend1: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: true,
        // if incomplete, still select an end date of last attended
     },
@@ -129,11 +129,11 @@ Resume.init(
       allowNull: true,
       },
       edstart2: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: true,
       },
       edend2: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: true,
        // if incomplete, still select an end date of last attended
     },
@@ -147,11 +147,11 @@ Resume.init(
       allowNull: true,
       },
       edstart3: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: true,
       },
       edend3: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: true,
        // if incomplete, still select an end date of last attended
     },
