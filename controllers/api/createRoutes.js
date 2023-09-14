@@ -85,4 +85,26 @@ router.post('/', async (req, res) => {
     }
 })
 
+router.put('/:id', async (req, res) => {
+    try {
+        const updateResume = await Resume.update(req.body, {
+            where : {id: req.params.id}
+        })
+
+        res.status(200).json(updateResume)
+
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
+
+router.delete('/:id', async (req, res) => {
+    try {
+        const deleteResume = await Resume.destroy({ where: {id : req.params.id}})
+        res.status(200).json(deleteResume)
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
+
 module.exports = router 
