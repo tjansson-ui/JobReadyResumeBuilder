@@ -4,14 +4,15 @@
 
     <div id="personal-info">
         <div class="user form-group">
+            <input type="hidden" hidden="true" id="resume-id" name="resume_id" value="{{singleResume.id}}">
             <label for="first-name">First Name:</label>
-            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="First Name" id="fname">
             <label for="first-name">Last Name:</label>
-            <input type="text" placeholder="Last Name">
+            <input type="text" placeholder="Last Name" id="lname">
             <label for="first-name">Email:</label>
-            <input type="email" placeholder="Email Address">
+            <input type="email" placeholder="Email Address" id="email">
             <label for="first-name">GitHub Username:</label>            
-            <input type="text" placeholder="GitHub Account">
+            <input type="text" placeholder="GitHub Account" id="github">
             <br>
         </div>
     </div>
@@ -27,7 +28,7 @@
             <input type="text" placeholder="Role" id="role1">
             <label for="company">Start Date</label>  
             <input type="text" placeholder="Start date: MMM YYYY" id = "rolestart1">
-            <label for="company">End Date MMM YYYY. Leave blank is present</label>              
+            <label for="company">End Date MMM YYYY. Leave blank if present</label>              
             <input type="text" placeholder="End date: MMM YYYY" id = "roleend1">
             <textarea placeholder="Role Description" id = "description1"></textarea>
             <p></p>
@@ -121,9 +122,9 @@
     <div id="skills" class="form-group">
         <div class="skills">
             <ul>
-               <li><input type="text" placeholder="Skill 1"></li>
-               <li><input type="text" placeholder="Skill 2"></li>
-               <li><input type="text" placeholder="Skill 3"></li> 
+               <li><input type="text" placeholder="Skill 1" id="skill1"></li>
+               <li><input type="text" placeholder="Skill 2" id="skill2"></li>
+               <li><input type="text" placeholder="Skill 3" id="skill3"></li> 
             </ul>
         </div>
     </div>
@@ -136,3 +137,4 @@
 </div>
 
 <script src="/js/create.js"></script>
+<script src="/js/handleCreate.js"></script>
