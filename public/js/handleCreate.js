@@ -34,3 +34,63 @@ const edEnd3 = document.getElementById('edend3')
 const skill1 = document.getElementById('skill1')
 const skill2 = document.getElementById('skill2')
 const skill3 = document.getElementById('skill3')
+
+function handleSubmit(e) {
+    e.preventDefault()
+    const resumeData = {
+        resume_id: resumeId.value,
+        fname: fName.value,
+        lname: lName.value,
+        emai: email.value,
+        github: github.value,
+        company1: company1.value,
+        role1: role1.value,
+        description1: description1.value,
+        rolestart1: roleStart1.value,
+        roleend1: roleEnd1.value,
+        company2: company2.value,
+        role2: role2.value,
+        description2: description2.value,
+        rolestart2: roleStart2.value,
+        roleend2: roleEnd2.value,
+        company3: company3.value,
+        role3: role3.value,
+        description3: description3.value,
+        rolestart3: roleStart3.value,
+        roleend3: roleEnd3.value,
+        institute1: institute1.value,
+        degree1: degree1.value,
+        edstart1: edStart1.value,
+        edend1: edEnd1.value,
+        institute2: institute2.value,
+        degree2: degree2.value,
+        edstart2: edStart2.value,
+        edend2: edEnd2.value,
+        institute3: institute3.value,
+        degree3: degree3.value,
+        edstart3: edStart3.value,
+        edend3: edEnd3.value,
+        skill1: skill1.value,
+        skill2: skill2.value,
+        skill3: skill3.value
+    }
+
+    fetch('api/create', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(resumeData)
+    })
+    .then(response => {
+        if (response.status === 200) {
+            window.location.reload()
+        }
+    })
+    .catch(err => console.log(err))
+}
+
+
+
+
+form.addEventListener('submit', handleSubmit)
