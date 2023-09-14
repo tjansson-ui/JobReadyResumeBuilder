@@ -46,6 +46,7 @@ The purpose of this application was to create a simple template for users to gen
 [![MySQL2](https://img.shields.io/badge/MySql2-red)](https://www.npmjs.com/package/mysql2) 
 [![bcrypt](https://img.shields.io/badge/Bcrypt-purple)](https://www.npmjs.com/package/bcrypt) 
 [![dotenv](https://img.shields.io/badge/.env-yellow)](https://www.npmjs.com/package/dotenv) 
+[![pdfmake](https://img.shields.io/badge/PDFmake-maroon)](https://pdfmake.github.io/docs/0.1/) 
 
 ## [Contributions](#table-of-contents)
 This application was initiated as a project from the University of Wisconsin Coding Bootcamp. The project was designed and completed by Nicole Stark, Tor Jansson, and Liz Friedman. 
