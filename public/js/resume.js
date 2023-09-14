@@ -4,78 +4,77 @@ downloadResume.addEventListener('click', () => {
     generatePDF()
 })
 
-const singleResume = {
-	{{fname}};
-	{{lname}};
-	{{email}};
-	{{github}};
-	{{institute1}};
-	{{degree1}};
-	{{edstart1}};
-	{{edend1}};
-	{{institute2}};
-	{{degree2}};
-	{{edstart2}};
-	{{edend2}};
-	{{institute3}};
-	{{degree3}};
-	{{edstart3}};
-	{{edend3}};
-	{{company1}};
-	{{role1}};
-	{{description1}};
-	{{rolestart1}};
-	{{roleend1}};
-	{{company2}};
-	{{role2}},
-	{{description2}};
-	{{rolestart2}};
-	{{roleend2}};
-	{{company3}};
-	{{role3}};
-	{{description3}};
-	{{rolestart3}};
-	{{roleend3}};
-	{{skill1}};
-	{{skill2}};
-	{{skill3}};
+// const singleResume = {
+// 	fname: {{fname}};
+// 	lname: {{lname}};
+// 	email: {{email}};
+// 	github: {{github}};
+// 	institute1: {{institute1}};
+// 	degree1: {{degree1}};
+// 	edstart1: {{edstart1}};
+// 	edend1: {{edend1}};
+// 	institute2: {{institute2}};
+// 	degree2: {{degree2}};
+// 	edstart2: {{edstart2}};
+// 	edend2: {{edend2}};
+// 	institute3: {{institute3}};
+// 	degree3: {{degree3}};
+// 	edstart3: {{edstart3}};
+// 	edend3: {{edend3}};
+// 	company1: {{company1}};
+// 	role1: {{role1}};
+// 	description1: {{description1}};
+// 	rolestart1: {{rolestart1}};
+// 	roleend1: {{roleend1}};
+// 	company2: {{company2}};
+// 	role2: {{role2}},
+// 	description2: {{description2}};
+// 	rolestart2: {{rolestart2}};
+// 	roleend2: {{roleend2}};
+// 	company3: {{company3}};
+// 	role3: {{role3}};
+// 	description3: {{description3}};
+// 	rolestart3: {{rolestart3}};
+// 	roleend3: {{roleend3}};
+// 	skill1: {{skill1}};
+// 	skill2: {{skill2}};
+// 	skill3: {{skill3}};
+//   };
 
-  };
-
-  const fname = singleResume.fname;
-  const lname = singleResume.lname;
-  const email = singleResume.email;
-  const github = singleResume.github;
-  const institute1 = singleResume.institute1;
-  const degree1 = singleResume.degree1;
-  const edstart1 = singleResume.edstart1;
-  const edend1 = singleResume.edend1;
-  const institute2 = singleResume.institute2;
-  const degree2 = singleResume.degree2;
-  const edstart2 = singleResume.edstart2;
-  const edend2 = singleResume.edend2;
-  const institute3 = singleResume.institute3;
-  const degree3 = singleResume.degree3
-  const edstart3 = singleResume.edstart3;
-  const edend3 = singleResume.edend3;
-  const company1 = singleResume.company1;
-  const role1 =singleResume.role1;
-  const description1 =singleResume.description1;
-  const rolestart1 = singleResume.rolestart1;
-  const roleend1 = singleResume.roleend1;
-  const company2 =singleResume.company2
-  const role2 = singleResume.role2;
-  const description2 = singleResume.description2;
-  const rolestart2 =singleResume.rolestart2;
-  const roleend2 = singleResume.roleend2;
-  const company3 = singleResume.company3;
-  const role3 = singleResume.role3;
-  const description3 = singleResume.description3;
-  const rolestart3 = singleResume.rolestart3;
-  const roleend3 = singleResume.roleend3;
-  const skill1 = singleResume.skill1;
-  const skill2 = singleResume.skill2;
-  const skill3 = singleResume.skill3;
+//   const fname = singleResume.fname;
+//   const lname = singleResume.lname;
+//   const email = singleResume.email;
+//   const github = singleResume.github;
+//   const institute1 = singleResume.institute1;
+//   const degree1 = singleResume.degree1;
+//   const edstart1 = singleResume.edstart1;
+//   const edend1 = singleResume.edend1;
+//   const institute2 = singleResume.institute2;
+//   const degree2 = singleResume.degree2;
+//   const edstart2 = singleResume.edstart2;
+//   const edend2 = singleResume.edend2;
+//   const institute3 = singleResume.institute3;
+//   const degree3 = singleResume.degree3
+//   const edstart3 = singleResume.edstart3;
+//   const edend3 = singleResume.edend3;
+//   const company1 = singleResume.company1;
+//   const role1 =singleResume.role1;
+//   const description1 =singleResume.description1;
+//   const rolestart1 = singleResume.rolestart1;
+//   const roleend1 = singleResume.roleend1;
+//   const company2 =singleResume.company2
+//   const role2 = singleResume.role2;
+//   const description2 = singleResume.description2;
+//   const rolestart2 =singleResume.rolestart2;
+//   const roleend2 = singleResume.roleend2;
+//   const company3 = singleResume.company3;
+//   const role3 = singleResume.role3;
+//   const description3 = singleResume.description3;
+//   const rolestart3 = singleResume.rolestart3;
+//   const roleend3 = singleResume.roleend3;
+//   const skill1 = singleResume.skill1;
+//   const skill2 = singleResume.skill2;
+//   const skill3 = singleResume.skill3;
 
 
 
