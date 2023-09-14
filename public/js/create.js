@@ -1,192 +1,137 @@
-
 const addJob = document.getElementById("add-job")
 const addEd = document.getElementById("add-ed")
-let jobEntryCount = 1; 
-let edEntryCount = 1; 
+const deleteJob = document.getElementById("delete-job")
+const deleteEd = document.getElementById("delete-ed")
 
+const jobentry2 = document.getElementById("job-entry2")
+const jobentry3 = document.getElementById("job-entry3")
 
+const edentry2 = document.getElementById("ed-entry2")
+const edentry3 = document.getElementById("ed-entry3")
 
-addJob.addEventListener("click", (e) => {
-    if (jobEntryCount < 3) {
-        e.preventDefault();
-
-        // Creates job entry elements
-        const jobHistory = document.getElementById("job-history");
-    
-        const jobEntry = document.createElement("div");
-        jobEntry.classList.add("job-entry");
-
-        const para = document.createElement("p");
-    
-        const companyInput = document.createElement("input");
-        companyInput.type = "text";
-        companyInput.placeholder = "Company";
-    
-        const roleInput = document.createElement("input");
-        roleInput.type = "text";
-        roleInput.placeholder = "Role";
-    
-        const startDateInput = document.createElement("input");
-        startDateInput.type = "text";
-        startDateInput.placeholder = "Start date: MMM YYYY";
-    
-        const endDateInput = document.createElement("input");
-        endDateInput.type = "text";
-        endDateInput.placeholder = "End date: MMM YYYY";
-    
-        const roleDescriptionTextarea = document.createElement("textarea");
-        roleDescriptionTextarea.placeholder = "Role Description";
-    
-        const removeButton = document.createElement("button");
-        removeButton.textContent = "Remove";
-        removeButton.classList.add("delete-job");
-        removeButton.onclick = function() {
-            removeJobEntry(this);
-        };
-
-        const hideRemoveButtons = () => {
-            const removeButtons = document.querySelectorAll(".delete-job");
-            removeButtons.forEach(button => {
-            button.style.display = "none";
-            }); 
-        };
-        
-        hideRemoveButtons();
-
-        // Appends job entry block
-        jobEntry.appendChild(companyInput);
-        jobEntry.appendChild(roleInput);
-        jobEntry.appendChild(startDateInput);
-        jobEntry.appendChild(endDateInput);
-        jobEntry.appendChild(roleDescriptionTextarea);
-        jobEntry.appendChild(removeButton);
-        jobEntry.appendChild(para);
-    
-        jobHistory.appendChild(jobEntry);  
-
-
-        // Update the visibility of "Remove" buttons when adding a new job entry
-        if (jobHistory.childElementCount > 1) {
-            const lastJobEntry = jobHistory.lastChild;
-            lastJobEntry.querySelector(".delete-job").style.display = "block";
+const removeHiddenJob = () => {
+    if (jobentry2.classList.contains('hidden')) {
+        const children = jobentry2.children;
+        // Loop through the children and remove the "hidden" class
+        for (let i = 0; i < children.length; i++) {
+            const child = children[i];
+            child.classList.remove('hidden');
         }
-
-
-        jobEntryCount++;
-
-        // Disable the "Add Job" button when the limit is reached
-        if (jobEntryCount >= 3) {
-            addJob.disabled = true;
-        } 
-    }
-}) //Adds job entry below last entry
-
-addEd.addEventListener("click", (e) => {
-    if (edEntryCount < 3) {
-        e.preventDefault();
-
-        // Creates job entry elements
-        const edHistory = document.getElementById("ed-history");
-    
-        const edEntry = document.createElement("div");
-        edEntry.classList.add("ed-entry");
-
-        const para = document.createElement("p")
-    
-        const schoolInput = document.createElement("input");
-        schoolInput.type = "text";
-        schoolInput.placeholder = "Institute";
-    
-        const degreeInput = document.createElement("input");
-        degreeInput.type = "text";
-        degreeInput.placeholder = "Degree";
-    
-        const startDateInput = document.createElement("input");
-        startDateInput.type = "text";
-        startDateInput.placeholder = "Start date: MMM YYYY";
-    
-        const endDateInput = document.createElement("input");
-        endDateInput.type = "text";
-        endDateInput.placeholder = "End date: MMM YYYY";
-    
-        const removeButton = document.createElement("button");
-        removeButton.textContent = "Remove";
-        removeButton.classList.add("delete-ed");
-        removeButton.onclick = function() {
-            removeEdEntry(this);
-        };
-
-        const hideRemoveButtons = () => {
-            const removeButtons = document.querySelectorAll(".delete-ed");
-            removeButtons.forEach(button => {
-            button.style.display = "none";
-            }); 
-        };
-        
-        hideRemoveButtons();
-
-        // Appends education entry block
-        edEntry.appendChild(schoolInput);
-        edEntry.appendChild(degreeInput);
-        edEntry.appendChild(startDateInput);
-        edEntry.appendChild(endDateInput);
-        edEntry.appendChild(removeButton);
-        edEntry.appendChild(para);
-
-        edHistory.appendChild(edEntry);  
-        edHistory.html("<br/>")
-
-
-        // Update the visibility of "Remove" buttons when adding a new education entry
-        if (edHistory.childElementCount > 1) {
-            const lastEdEntry = edHistory.lastChild;
-            lastEdEntry.querySelector(".delete-ed").style.display = "block";
+        jobentry2.classList.remove('hidden')
+        deleteJob.classList.remove('hidden')
+    } else {
+        const children = jobentry3.children;
+        // Loop through the children and remove the "hidden" class
+        for (let i = 0; i < children.length; i++) {
+            const child = children[i];
+            child.classList.remove('hidden');
         }
-
-
-        edEntryCount++;
-
-        // Disable the "Add Education" button when the limit is reached
-        if (edEntryCount >= 3) {
-            addEd.disabled = true;
-        } 
+        jobentry3.classList.remove('hidden')
+        addJob.classList.add('hidden')
     }
-}) //Adds education entry below last entry
+};
 
-function removeJobEntry(button) {
-    const jobEntry = button.parentNode;
-    const jobHistory = document.getElementById("job-history");
-    jobHistory.removeChild(jobEntry);
-    jobEntryCount--;
-
-    // Show the "Remove" button for the new last job entry
-    const lastJobEntry = jobHistory.lastChild;
-    if (lastJobEntry) {
-        lastJobEntry.querySelector(".delete-job").style.display = "block";
+const removeHiddenEd = () => {
+    if (edentry2.classList.contains('hidden')) {
+        const children = edentry2.children;
+        // Loop through the children and remove the "hidden" class
+        for (let i = 0; i < children.length; i++) {
+            const child = children[i];
+            child.classList.remove('hidden');
+        }
+        edentry2.classList.remove('hidden')
+        deleteEd.classList.remove('hidden')
+    } else {
+        const children = edentry3.children;
+        // Loop through the children and remove the "hidden" class
+        for (let i = 0; i < children.length; i++) {
+            const child = children[i];
+            child.classList.remove('hidden');
+        }
+        edentry3.classList.remove('hidden')
+        addEd.classList.add('hidden')
     }
+};
 
-    // Enable the "Add Job" button when a job entry is removed
-    if (jobEntryCount < 3) {
-        addJob.disabled = false;
+
+const clearJob = () => {
+    if (jobentry3.classList.contains('hidden')) {
+        
+        const children = jobentry2.children;
+        // Loop through the children and add the "hidden" class
+        for (let i = 0; i < children.length; i++) {
+            const child = children[i];
+            child.classList.add('hidden');
+            // Check if the child is an input element
+            if (child.tagName.toLowerCase() === 'input') {
+                // If it's an input element, set its value to an empty string
+                child.value="";
+            }
+        }
+        jobentry2.classList.add('hidden')
+        deleteJob.classList.add('hidden')
+    } else
+    {
+        const children = jobentry3.children;
+        // Loop through the children and add the "hidden" class
+        for (let i = 0; i < children.length; i++) {
+            const child = children[i];
+            child.classList.add('hidden');
+            // Check if the child is an input element
+            if (child.tagName.toLowerCase() === 'input') {
+                // If it's an input element, set its value to an empty string
+                child.value="";
+            }
+        }
+        jobentry3.classList.add('hidden')
+        console.log("foo")
+        addJob.classList.remove('hidden')
     }
-} // Removes job entry
+};
 
-function removeEdEntry(button) {
-    const edEntry = button.parentNode;
-    const edHistory = document.getElementById("ed-history");
-    edHistory.removeChild(edEntry);
-    edEntryCount--;
-
-    // Show the "Remove" button for the new last ed entry
-    const lastEdEntry = edHistory.lastChild;
-    if (lastEdEntry) {
-        lastEdEntry.querySelector(".delete-ed").style.display = "block";
+const clearEd = () => {
+    if (edentry3.classList.contains('hidden')) {
+        
+        const children = edentry2.children;
+        // Loop through the children and add the "hidden" class
+        for (let i = 0; i < children.length; i++) {
+            const child = children[i];
+            child.classList.add('hidden');
+            // Check if the child is an input element
+            if (child.tagName.toLowerCase() === 'input') {
+                // If it's an input element, set its value to an empty string
+                child.value="";
+            }
+        }
+        edentry2.classList.add('hidden')
+        deleteEd.classList.add('hidden')
+    } else
+    {
+        
+        const children = edentry3.children;
+        // Loop through the children and add the "hidden" class
+        for (let i = 0; i < children.length; i++) {
+            const child = children[i];
+            child.classList.add('hidden');
+            // Check if the child is an input element
+            if (child.tagName.toLowerCase() === 'input') {
+                // If it's an input element, set its value to an empty string
+                child.value="";
+            }
+        }
+        edentry3.classList.add('hidden')
+        addEd.classList.remove('hidden')
     }
+}
 
-    // Enable the "Add Education" button when a ed entry is removed
-    if (edEntryCount < 3) {
-        addEd.disabled = false;
-    }
-} // Removes ed entry
+addJob.addEventListener("click", removeHiddenJob) 
+//Adds job entry below last entry
 
+addEd.addEventListener("click", removeHiddenEd) 
+//Adds education entry below last entry
 
+deleteJob.addEventListener("click", clearJob) 
+//Adds job entry below last entry
+
+deleteEd.addEventListener("click", clearEd) 
+//Adds education entry below last entry
