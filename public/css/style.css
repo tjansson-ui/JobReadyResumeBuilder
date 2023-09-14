@@ -91,6 +91,10 @@ footer {
 }
 
 /* styling resume section on profile page */
+a.name {
+    color: var(--main);
+}
+
 hr {
     width: 100%;
 }
@@ -160,6 +164,40 @@ button.add-comment {
 button.add-comment:hover {
     background: var(--accent);
 }
+
+/* styling edit/delete buttons */
+a.edit {
+    background: var(--main);
+    color: white;
+}
+
+a.edit:hover {
+    text-decoration: none;
+    background: var(--accent);
+}
+
+/* styling edit page */
+h1.edit-page {
+    margin-top: 30px;
+    color: var(--main);
+}
+
+/* styling create form */
+textarea {
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid var(--main);
+    padding: 8px;
+    font-size: 20px;
+
+}
+
+.skills ul li {
+    margin: 15px 0;
+}
+
+
 
 /* -------------media queries------------- */
 
