@@ -41,7 +41,7 @@ function handleSubmit(e) {
         resume_id: resumeId.value,
         fname: fName.value,
         lname: lName.value,
-        emai: email.value,
+        email: email.value,
         github: github.value,
         company1: company1.value,
         role1: role1.value,
