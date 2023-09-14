@@ -113,7 +113,6 @@ var dd = {
 	            }
 	       ]
 	    },
-	   // JOB2
 	    {
 	        text: 'Cat Burglar\n',
 	        italics: true,
@@ -121,6 +120,7 @@ var dd = {
 	    {
 	        text: 'DStole from people more fortunate than my family'
 	    },
+		// JOB 2
 	    {
 	        alignment: 'justify',
 	        columns: [
@@ -134,7 +134,6 @@ var dd = {
 	            }
 	       ]
 	    },
-	   // JOB3
 	    {
 	        text: 'Dino Wrangler\n',
 	        italics: true,
@@ -142,6 +141,7 @@ var dd = {
 	    {
 	        text: 'Lost a toe but saved a baby bronchosaurus'
 	    },
+		// JOB 3
 	    {
 	        alignment: 'justify',
 	        columns: [
