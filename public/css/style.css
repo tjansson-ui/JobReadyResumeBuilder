@@ -182,6 +182,21 @@ h1.edit-page {
     color: var(--main);
 }
 
+/* styling create form */
+textarea {
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid var(--main);
+    padding: 8px;
+    font-size: 20px;
+
+}
+
+.skills ul li {
+    margin: 15px 0;
+}
+
 
 
 /* -------------media queries------------- */
