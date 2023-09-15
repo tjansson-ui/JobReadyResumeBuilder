@@ -24,7 +24,7 @@ form.addEventListener('submit', (e) => {
         .then(response => {
             if (response.status === 200) {
                 console.log(response)
-                // window.location.reload()
+                window.location.reload()
 
             }
         })
