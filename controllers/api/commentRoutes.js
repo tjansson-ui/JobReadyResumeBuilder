@@ -18,6 +18,7 @@ router.get('/', async (req, res) => {
 })
 
 router.post('/', async (req,res) => {
+    // const userData = await User.findOne({ where: {user_id : req.session.user_id}})
     try {
         const newComment = await Comment.create({
             ...req.body,
