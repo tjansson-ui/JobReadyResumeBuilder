@@ -19,14 +19,14 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req,res) => {
     try {
-        const newComment = Comment.create({
+        const newComment = await Comment.create({
             ...req.body,
             userId: req.session.user_id,
             resumeId: req.session.resume_id,
             content: req.body.content
         })
-
-        res.render('comments', { newComment })
+        console.log('here', req.session.user_id)
+        // res.render('comments', { newComment })
         res.status(200).json(newComment)
     } catch(err) {
         res.status(500).json(err)

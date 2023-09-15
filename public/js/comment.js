@@ -8,19 +8,23 @@ form.addEventListener('submit', (e) => {
         resume_id: resumeId.value,
         content: commentBody.value
     }
-
+    console.log(commentData)
+    console.log(document.cookie)
  
         fetch('/api/comment', {
+            
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(commentData)
+            body: JSON.stringify(commentData),
+            
         })
+        
         .then(response => {
             if (response.status === 200) {
                 console.log(response)
-                window.location.reload()
+                // window.location.reload()
 
             }
         })
