@@ -112,22 +112,4 @@
     {{/each}}
     
 
-
-    {{> comments}}
-
-    <div class="card my-5">
-        <div class="card-header" id="card-header">
-            <h3 class="m-3">Comments</h3>
-        </div>
-
-        <div class="card-body m-3">
-            {{#each comments}}
-            <p>{{content}}</p>
-
-            <p>&mdash; {{format_date createdAt}}</p>
-            {{/each}}
-        </div>
-
-    </div>
-
 </div>
