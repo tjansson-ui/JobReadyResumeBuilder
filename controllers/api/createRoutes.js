@@ -30,8 +30,8 @@ router.get('/:id', async (req, res) => {
                     ]
                 }
             ]
-        })
-        const singleResume = resume.get({ plain: true })
+        })        
+        const singleResume =  await resume.get({ plain: true })
         res.status(200).json({singleResume})
     } catch(err) {
         res.status(500).json(err)
