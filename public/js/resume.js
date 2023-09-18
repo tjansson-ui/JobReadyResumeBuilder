@@ -93,7 +93,7 @@ if(company1El){
 		text: `${company1}\n`,
 		style: 'subheader'
 	};
-	const description1 = document.getElementById('desciption1')
+	const description1 = document.getElementById('description1').innerHTML
 	const rolestart1 = document.getElementById('rolestart1').innerHTML
 	const roleend1 = document.getElementById('roleend1').innerHTML
 	company1Text =  {
@@ -123,7 +123,7 @@ if(company2El){
 		text: `${company2}\n`,
 		style: 'subheader'
 	};
-	const description2 = document.getElementById('desciption2')
+	const description2 = document.getElementById('description2').innerHTML
 	const rolestart2 = document.getElementById('rolestart2').innerHTML
 	const roleend2 = document.getElementById('roleend2').innerHTML
 	company2Text =  {
@@ -152,7 +152,7 @@ if(company3El){
 		text: `${company3}\n`,
 		style: 'subheader'
 	};
-	const description3 = document.getElementById('desciption3')
+	const description3 = document.getElementById('description3').innerHTML
 	const rolestart3 = document.getElementById('rolestart3').innerHTML
 	const roleend3 = document.getElementById('roleend3').innerHTML
 	company3Text =  {
@@ -229,7 +229,6 @@ var dd = {
 	   company3Obj,
 	   company3Text,
 	   company3Text2, 
-	   
 	   // SKILLS
 	   {
 	        text: '\nSkills\n',
@@ -263,7 +262,7 @@ var dd = {
 	        bold: true,
 	    },
 	    subheader: {
-	        fontSize: 12.5,
+	        fontSize: 12,
 	        bold: true,
 	    }
     }
