@@ -7,7 +7,10 @@ downloadResume.addEventListener('click', () => {
 // header variables
 const nameEl = document.getElementById('nameEl').innerHTML
 const emailEl = document.getElementById('emailEl').innerHTML
-const githubEl = document.getElementById('githubEl').innerHTML
+
+// github 
+const githubEl = document.getElementById('github').innerHTML
+if(githubEl) {}
 
 // institute1
 const institute1El = document.getElementById('institute1')
@@ -17,7 +20,7 @@ let institute1Text
 if(institute1El){
 	let institute1 = document.getElementById('institute1').innerHTML
 	institute1Obj = {
-		text: `${institute1}\n`,
+		text: `\n${institute1}`,
 		style: 'subheader'
 	};
 	const degree1 = document.getElementById('degree1').innerHTML
@@ -25,11 +28,11 @@ if(institute1El){
 	const edend1 = document.getElementById('edend1').innerHTML
 	institute1Text = {
 		text: [
-			`${degree1}\n\n`,
-			`${edstart1}\n`,
-			`${edend1}\n`,
+			`${degree1}`,
+			`${edstart1}`,
+			`${edend1}`,
 			],
-	   margin: [0,10], 
+	   margin: [0,0], 
 	};
 }
 
@@ -49,11 +52,11 @@ if(institute2El){
 	let edend2 = document.getElementById('edend2').innerHTML
 	institute2Text = {
 		text: [
-			`${degree2}\n\n`,
-			`${edstart2}\n`,
-			`${edend2}\n`,
+			`${degree2}`,
+			`${edstart2}`,
+			`${edend2}`,
 			],
-	   margin: [0,10], 
+	   margin: [0,0], 
 	};
 }
 
@@ -73,11 +76,11 @@ if(institute3El){
 	let edend3 = document.getElementById('edend3').innerHTML
 	institute3Text = {
 		text: [
-			`${degree3}\n\n`,
-			`${edstart3}\n`,
-			`${edend3}\n`,
+			`${degree3}`,
+			`${edstart3}`,
+			`${edend3}`,
 			],
-	   margin: [0,10], 
+	   margin: [0,0], 
 	};
 }
 
@@ -90,7 +93,7 @@ let company1Text2
 if(company1El){
 	let company1 = document.getElementById('company1').innerHTML
 	company1Obj = {
-		text: `${company1}\n`,
+		text: `\n${company1}\n`,
 		style: 'subheader'
 	};
 	const description1 = document.getElementById('description1').innerHTML
@@ -100,12 +103,13 @@ if(company1El){
 		ul: [
 			`${description1}`
 			],
-	   margin: [10,10],
+		italics: true,	
+	
 	};
 	company1Text2 =  {
 		text: [
-			`${rolestart1}\n`,
-			`${roleend1}\n`,
+			`${rolestart1}`,
+			`${roleend1}`,
 			],
 	};
 }
@@ -130,12 +134,12 @@ if(company2El){
 		ul: [
 			`${description2}`
 			],
-	   margin: [10,10],
+		italics: true,		
 	};
 	company2Text2 =  {
 		text: [
-			`${rolestart2}\n`,
-			`${roleend2}\n`,
+			`${rolestart2}`,
+			`${roleend2}`,
 			],
 	};
 }
@@ -159,20 +163,26 @@ if(company3El){
 		ul: [
 			`${description3}`
 			],
-	   margin: [10,10],
+		italics: true,	
 	};
 	company3Text2 =  {
 		text: [
-			`${rolestart3}\n`,
-			`${roleend3}\n`,
+			`${rolestart3}`,
+			`${roleend3}`,
 			],
 	};
 }
 
 // skills
-const skill1 = document.getElementById('skill1').innerHTML
-const skill2 = document.getElementById('skill2').innerHTML
-const skill3 = document.getElementById('skill3').innerHTML
+const skill1El = document.getElementById('skill1').innerHTML
+if(skill1El) {}
+
+const skill2El = document.getElementById('skill2').innerHTML
+if(skill1El) {}
+
+const skill3El = document.getElementById('skill3').innerHTML
+if(skill3El) {}
+
 
 
 
@@ -189,7 +199,7 @@ var dd = {
 	        alignment: 'center',
 	        text: [
 	            `Email: ${emailEl}\n`,
-	            `Github: ${githubEl}\n`,
+				githubEl,
 	        ]
 	    },
 	    
@@ -238,9 +248,9 @@ var dd = {
 	    {
 	        alignment: 'justify',
 	        ul: [
-	            `${skill1}`,
-	            `${skill2}`,
-	            `${skill3}`,
+	            skill1El,
+				skill2El,
+				skill3El,
 	       ]
 	    },
 	],
@@ -262,7 +272,7 @@ var dd = {
 	        bold: true,
 	    },
 	    subheader: {
-	        fontSize: 12,
+	        fontSize: 14,
 	        bold: true,
 	    }
     }
