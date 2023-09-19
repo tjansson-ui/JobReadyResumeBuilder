@@ -82,7 +82,7 @@ if(institute3El){
 }
 
 // company 1
-const company1El = document.getElementById('company1').innerHTML
+const company1El = document.getElementById('company1')
 let company1Obj
 let company1Text
 let company1Text2
@@ -112,7 +112,7 @@ if(company1El){
 
 
 // company 2
-const company2El = document.getElementById('company2').innerHTML
+const company2El = document.getElementById('company2')
 let company2Obj
 let company2Text
 let company2Text2
@@ -141,7 +141,7 @@ if(company2El){
 }
 
 // company 3
-const company3El = document.getElementById('company3').innerHTML
+const company3El = document.getElementById('company3')
 let company3Obj
 let company3Text
 let company3Text2
