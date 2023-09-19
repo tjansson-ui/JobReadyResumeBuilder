@@ -84,7 +84,7 @@ function handleSubmit(e) {
     })
     .then(response => {
         if (response.status === 200) {
-            window.location.reload()
+            document.location.replace('/profile')
         }
     })
     .catch(err => console.log(err))
