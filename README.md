@@ -3,6 +3,7 @@
 ## Description
 The purpose of this application was to create a simple template for users to generate a resume. The application allows users to sign up for Career Craft's services, and then gives users access to the resume generator. The application functions through Node JS and Express JS command line following the MVC paradigm. The application uses Handlebars.js as the templating language, and MySQL and Sequelize as the ORM. 
 
+Application deployed through [Heroku](https://career-craft-2e3c88d80d23.herokuapp.com)
 
 ![screenshot](/public/assets/homepage-screenshot.png)
 
@@ -16,7 +17,7 @@ The purpose of this application was to create a simple template for users to gen
   * [Questions](#questions)
 
 ## [Installation](#Table-of-Contents)
-1. Install 'node.js' https://nodejs.org/en/download.
+1. Install 'node.js' https://nodejs.org/en/download, if not installed already.
 
 2. Clone this repo to your local computer https://github.com/tjansson-ui/JobReadyResumeBuilder.
 
@@ -47,6 +48,8 @@ The purpose of this application was to create a simple template for users to gen
 [![bcrypt](https://img.shields.io/badge/Bcrypt-purple)](https://www.npmjs.com/package/bcrypt) 
 [![dotenv](https://img.shields.io/badge/.env-yellow)](https://www.npmjs.com/package/dotenv) 
 [![pdfmake](https://img.shields.io/badge/PDFmake-maroon)](https://pdfmake.github.io/docs/0.1/) 
+[![Heroku](https://img.shields.io/badge/Heroku-magenta)](https://heroku.com) 
+
 
 ## [Contributions](#table-of-contents)
 This application was initiated as a project from the University of Wisconsin Coding Bootcamp. The project was designed and completed by Nicole Stark, Tor Jansson, and Liz Friedman. 
@@ -54,8 +57,8 @@ This application was initiated as a project from the University of Wisconsin Cod
 ## [Questions](#Table-of-Contents)
 If you have any questions contact developers here:
 
-N. Stark: [Github](nstark12)
+N. Stark: [Github](https://github.com/nstark12)
 <br> 
-T. Jansson: [Github](tjansson-ui)
+T. Jansson: [Github](https://github.com/tjansson-ui)
 <br>
-L. Friedman:   [GitHub](https://github.com/lizf57)
+L. Friedman:   [Github](https://github.com/lizf57)
